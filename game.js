@@ -291,10 +291,10 @@ function initLevel(stage) {
         level.endX = 5000;
         level.platforms = [
             { x: 0, y: GAME_HEIGHT - 40, width: 750, height: 40, type: 'ground' },
-            { x: 1050, y: GAME_HEIGHT - 40, width: 750, height: 40, type: 'ground' },
-            { x: 2000, y: GAME_HEIGHT - 40, width: 800, height: 40, type: 'ground' },
-            { x: 3100, y: GAME_HEIGHT - 40, width: 800, height: 40, type: 'ground' },
-            { x: 4100, y: GAME_HEIGHT - 40, width: 1000, height: 40, type: 'ground' },
+            { x: 900, y: GAME_HEIGHT - 40, width: 850, height: 40, type: 'ground' },
+            { x: 1900, y: GAME_HEIGHT - 40, width: 850, height: 40, type: 'ground' },
+            { x: 2900, y: GAME_HEIGHT - 40, width: 850, height: 40, type: 'ground' },
+            { x: 3900, y: GAME_HEIGHT - 40, width: 1100, height: 40, type: 'ground' },
             { centerX: 900, centerY: GAME_HEIGHT - 80, radius: 60, angle: 0, width: 100, height: 30, type: 'ferrisWheel', speed: 1.0 },
             { centerX: 900, centerY: GAME_HEIGHT - 80, radius: 60, angle: Math.PI, width: 100, height: 30, type: 'ferrisWheel', speed: 1.0 },
             { centerX: 1900, centerY: GAME_HEIGHT - 180, radius: 80, angle: 0, width: 80, height: 40, type: 'ferrisWheel', speed: 1.2 },
