@@ -152,8 +152,8 @@ UI.soundToggle.addEventListener('click', (e) => {
     e.target.blur(); // Prevent Space key from triggering the button again
 });
 
-const GAME_WIDTH = canvas.width;
-const GAME_HEIGHT = canvas.height;
+const GAME_WIDTH = canvas.width; // 600
+const GAME_HEIGHT = canvas.height; // 600
 
 const STATE = { START: 0, PLAYING: 1, GAME_OVER: 2, CLEAR: 3 };
 let currentState = STATE.START;
