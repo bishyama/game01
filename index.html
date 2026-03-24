@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Wedding Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <div id="ui-layer">
+            <div id="hud-layer">
+                <div id="time-counter">挙式開始まで：<span id="time-left">30</span>秒</div>
+                <div class="hud-stats">
+                    <div id="stage-indicator">Stage: 1 / 3</div>
+                    <div id="ring-counter">🎁 Items: <span id="ring-count">0</span> / 3</div>
+                    <div id="hp-counter">💖 HP: <span id="hp-icons">❤❤❤</span></div>
+                </div>
+                <button id="sound-toggle" class="sound-btn">🔊 OFF</button>
+            </div>
+            
+            <div id="touch-controls">
+                <div class="d-pad">
+                    <button id="btn-left" class="touch-btn">◀</button>
+                    <button id="btn-right" class="touch-btn">▶</button>
+                </div>
+                <div class="action-btn">
+                    <button id="btn-jump" class="touch-btn">JUMP</button>
+                </div>
+            </div>
+            
+            <div id="start-screen" class="screen">
+                <div class="invitation-card">
+                    <div class="invitation-border"></div>
+                    <p class="invitation-welcome">Welcome to Our Wedding Party</p>
+                    <h1>HAPPY WEDDING</h1>
+                    <p>Select Difficulty to Start!</p>
+                    <div id="difficulty-buttons">
+                        <button class="diff-btn" data-diff="easy">EASY (HP:5 / 60s)</button>
+                        <button class="diff-btn" data-diff="normal">NORMAL (HP:3 / 30s)</button>
+                        <button class="diff-btn" data-diff="hard">HARD (HP:1 / 20s)</button>
+                    </div>
+                </div>
+                <div class="controls-info">Controls: Left/Right keys to move, Space to jump</div>
+            </div>
+            
+            <div id="game-over-screen" class="screen hidden">
+                <h1 id="game-over-title">GAME OVER...</h1>
+                <div id="angry-bride-container">
+                    <img id="angry-bride-photo" src="angry_bride.png" alt="Angry Bride">
+                </div>
+                <p class="game-over-reason" id="game-over-reason"></p>
+                <p>Press SPACE or Tap to Retry</p>
+            </div>
+            
+            <div id="clear-screen" class="screen hidden">
+                <h1 class="rainbow-text" id="clear-title">HAPPY WEDDING!</h1>
+                <h2 id="gold-rank-text" class="hidden">✨ GOLD RANK ✨</h2>
+                <div id="photo-overlay">
+                    <img id="ending-photo" src="wedding_photo.png" alt="Happy Wedding">
+                </div>
+                <div id="credits-container">
+                    <div id="credits-scroller">
+                        <p>Special Thanks to Our Guests...</p>
+                        <p>For sharing this wonderful day with us</p>
+                        <p>May your lives be filled with happiness</p>
+                        <p>Ravir Okayama Presents</p>
+                        <p>Happy Wedding! 🎉</p>
+                    </div>
+                </div>
+                <p class="press-space" id="clear-prompt">Press SPACE or Tap to Play Again</p>
+            </div>
+
+            <div id="stage-clear-screen" class="screen hidden">
+                <h1 class="rainbow-text">STAGE CLEAR!</h1>
+                <p>Well done! You're one step closer to the bride.</p>
+                <button id="next-stage-btn" class="diff-btn" style="background-color: #4fc3f7; margin-top: 20px;">NEXT STAGE ▶</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
